@@ -1,16 +1,16 @@
-import React from 'react'
-import screenshot from '../Images/image1.png'
-import Pizza from '../Images/Pizza.png'
-import Vector from '../Images/Vector.png'
-import Food from '../Images/Food.png'
-import image1 from '../Images/image1.png'
-import { FaInstagram, FaTwitter, FaFacebookF } from 'react-icons/fa'
-import CardCarousel from './CardCarousel'
+import React from "react";
+import screenshot from "../Images/image1.png";
+import Pizza from "../Images/Pizza.png";
+import Vector from "../Images/Vector.png";
+import Food from "../Images/Food.png";
+import image1 from "../Images/image1.png";
+import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
+import CardCarousel from "./CardCarousel";
 
 const LandingPage = () => {
   return (
-    <div className="h-screen bg-slate-100 ">
-      <div className="h-fit pb-5 bg-white flex lg:flex-row flex-col shadow-md">
+    <div className="h-[100%] bg-slate-100 ">
+      <div className="h-fit pb-5 bg-white flex lg:flex-row flex-col">
         <div className="flex flex-col lg:pl-[6%] lg:order-1 order-2">
           <img
             src={screenshot}
@@ -78,7 +78,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center shadow-md sm:bg-slate-100">
+      <div className=" h-[60vh] lg:h-fit flex justify-center items-center  sm:mt-10 lg:mt-0">
         <div className="flex h-fit items-center lg:space-x-52 ">
           <div className="">
             <img
@@ -87,16 +87,16 @@ const LandingPage = () => {
               className="w-[384px] h-[468px] lg:block hidden"
             />
           </div>
-          <div className="lg:max-w-[600px] w-[275px] h-[235px] lg:mt-0 sm:my-10 text-center  ">
+          <div className=" lg:max-w-[600px] w-[275px] h-[235px] lg:mt-0 sm:my-10 text-center  ">
             <h1
-              className="text-[#0E2368] lg:text-[45px]  text-[26px] font-bold"
+              className="text-[#0E2368] lg:text-[45px]  text-[26px] font-bold lg:mb-0 mb-5"
               style={{ fontFamily: '"Poppins"' }}
             >
               About Us
             </h1>
             <p
               className="text-[#444957] lg:text-[15px] text-[11px] font-normal lg:leading-[27px] leading-[21px]"
-              style={{ fontFamily: 'Open Sans' }}
+              style={{ fontFamily: "Open Sans" }}
             >
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -114,8 +114,8 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="h-fit flex flex-col bg-white shadow-md">
-        <div className="mt-10  lg:pl-[6%]">
+      <div className="h-fit flex flex-col bg-white">
+        <div className="mt-10  lg:pl-[6%] sm:text-center">
           <h1
             className="lg:text-[56px] text-[38px] sm:text-center lg:text-start text-[#0E2368] font-semibold"
             style={{ fontFamily: '"Source Sans Pro"' }}
@@ -242,7 +242,7 @@ const LandingPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

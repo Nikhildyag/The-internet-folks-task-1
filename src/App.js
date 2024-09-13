@@ -1,33 +1,32 @@
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
-import LandingPage from './components/LandingPage'
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import LandingPage from "./components/LandingPage";
 
 const Applayout = () => {
   return (
     <div className="App">
       <Outlet />
     </div>
-  )
-}
+  );
+};
 
 const appRouter = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Applayout />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <LandingPage />,
       },
     ],
   },
-])
+]);
 function App() {
   return (
     <div>
       <RouterProvider router={appRouter} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

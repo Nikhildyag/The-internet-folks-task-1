@@ -1,68 +1,68 @@
-import React, { useState } from 'react'
-import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
-import Tomato from '../Images/Tomato.png'
-import Apple from '../Images/Apple.png'
-import Snack from '../Images/Snack.png'
-import GrilledTomato from '../Images/GrilledTomato.png'
-import Wrap from '../Images/Wrap.png'
-import Brocoli from '../Images/Brocoli.png'
+import React, { useState } from "react";
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import Tomato from "../Images/Tomato.png";
+import Apple from "../Images/Apple.png";
+import Snack from "../Images/Snack.png";
+import GrilledTomato from "../Images/GrilledTomato.png";
+import Wrap from "../Images/Wrap.png";
+import Brocoli from "../Images/Brocoli.png";
 
 const CardCarousel = () => {
   // Manage the index of the visible cards
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // Data for the cards
   const cards = [
     {
       image: Tomato,
-      title: 'Grilled Tomatoes at Home',
+      title: "Grilled Tomatoes at Home",
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
     },
     {
       image: Apple,
-      title: 'Snacks for Travel',
+      title: "Snacks for Travel",
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
     },
     {
       image: Snack,
-      title: 'Post workout recipes',
+      title: "Post workout recipes",
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
     },
     {
       image: GrilledTomato,
-      title: 'How to Grill Corn',
+      title: "How to Grill Corn",
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
     },
     {
       image: Wrap,
-      title: 'Crunchwrap Supreme',
+      title: "Crunchwrap Supreme",
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
     },
     {
       image: Brocoli,
-      title: 'Broccoli Cheese Soup',
+      title: "Broccoli Cheese Soup",
       description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
     },
-  ]
+  ];
 
   // Handling next and previous buttons
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + 3 < cards.length ? prevIndex + 3 : prevIndex
-    )
-  }
+    );
+  };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex - 3 >= 0 ? prevIndex - 3 : prevIndex
-    )
-  }
+    );
+  };
 
   return (
     <div className="relative flex flex-col items-center">
@@ -71,7 +71,7 @@ const CardCarousel = () => {
           {cards.slice(currentIndex, currentIndex + 3).map((card, index) => (
             <div
               key={index}
-              className="relative w-[418px] h-[554px] opacity-100 border border-gray-200 rounded-xl"
+              className="relative w-[418px] h-[554px] opacity-100 lg:border lg:border-gray-200 border border-gray-950 rounded-xl"
             >
               <div className="py-5 pl-7">
                 <img
@@ -105,7 +105,7 @@ const CardCarousel = () => {
           >
             <BiChevronLeft size={30} className="text-[#424961]" />
           </button>
-          {Math.ceil(currentIndex / 3) + 1}/2{' '}
+          {Math.ceil(currentIndex / 3) + 1}/2{" "}
           <button
             onClick={handleNext}
             disabled={currentIndex + 3 >= cards.length}
@@ -140,7 +140,7 @@ const CardCarousel = () => {
 
               <p
                 className="text-[#444957] text-[14px] font-normal leading-[24px]"
-                style={{ fontFamily: 'Open Sans' }}
+                style={{ fontFamily: "Open Sans" }}
               >
                 {card.description}
               </p>
@@ -176,7 +176,7 @@ const CardCarousel = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CardCarousel
+export default CardCarousel;
